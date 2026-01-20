@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- For thales:/Library/WebServer/coxeter-conv.lacim.uqam.ca/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8: http://docutils.sourceforge.net/" />
+<title>Coxeter Groups meet Convex Geometry</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 6387 2010-08-13 12:23:41Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: left }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<style type="text/css">
+
+/*
+:Author: Franco Saliola
+:Contact: saliola@gmail.com
+:Copyright: This stylesheet has been placed in the public domain.
+
+My stylesheet for use with Docutils.
+*/
+
+@import url(html4css1.css);
+
+/* My customizations */
+
+/* body */
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 20px;
+    padding: 0;
+    font-size: .8em;
+    background-color: #A8B1B8;
+}
+
+div.document {
+    width: 700px;
+    margin: 0 auto;
+    border: thick solid #333;
+    padding: 1em;
+    background-color: white;
+}
+
+h1.title
+{
+    padding-top: 0em;
+    font-size: 2em;
+    color: #000;
+}
+h1
+{
+    padding-top: 1em;
+    font-size: 1.5em;
+    color: #888;
+}
+
+/* links */
+a {
+    color: #880000;
+    text-decoration: none;
+    font-style: italic;
+}
+a:hover {
+    color: #00275E;
+    text-decoration: underline;
+}
+a.title {
+    color: #000;
+}
+a.title:hover {
+    color: green;
+}
+a.black_links {
+    color: #00275E;
+    text-decoration: underline;
+}
+
+/* navigation bar */
+/* css code for navbar from http://css.maxdesign.com.au/listamatic/horizontal16.htm */
+div.navbar {
+    font-size: small;
+    margin: 0;
+}
+div.navbar p.topic-title {
+    display: none;
+}
+div.navbar ul {
+    padding: .2em 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #00275E;
+    color: #FFF;
+    width: 100%;
+    font: normal 90% arial, helvetica, sans-serif;
+    text-align: center;
+}
+div.navbar li {
+    display: inline;
+}
+div.navbar li a {
+    text-decoration: none;
+    background-color: #00275E;
+    color: #FFF;
+    padding: .2em 1em;
+    border-right: 1px solid #fff;
+    font-style: normal;
+}
+div.navbar li a:hover {
+    background-color: #6D98AB;
+    color: #fff;
+}
+a.toc-backref {
+    color: #888;
+    text-decoration: none;
+    font-style: normal;
+}
+
+</style>
+</head>
+<body>
+<div class="document" id="combinatorial-algebra-meets-algebraic-combinatorics">
+<h1 class="title">Coxeter Groups meet Convex Geometry<br/>(Minicourses
+/ Workshop)</h1>
+
+<div class="contents navbar topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#information" id="id1">Information</a></li>
+<li><a class="reference internal" href="#program"
+       id="id2">Program</a></li>
+<li><a class="reference internal" href="#lectures"
+       id="id3">Lectures</a></li>
+<li><a class="reference internal" href="#participants" id="id4">Participants</a></li>
+
+
+<!--<li><a class="reference internal" href="#program" id="id4">Program</a></li>
+-->
+<li><a class="reference internal" href="#location"
+       id="id5">Location</a></li>
+
+<li><a class="reference internal" href="#hotels" id="id6">Hotels</a></li>
+
+<li><a class="reference internal" href="#travel" id="id7">Travel</a></li>
+
+<li><a class="reference internal" href="#other-information" id="id8">Other</a></li>
+
+</ul>
+</div>
+
+
+
+<div class="section" id="information">
+<h1><a class="toc-backref" href="#id1">Information</a></h1>
+
+<a href="Associaedre_H3-123.jpg">
+<img alt="Picture: A polytopal realization of the associahedron of
+     type H3" 
+title="A polytopal realization of the associahedron of type H3" 
+class="align-right" src="Associaedre_H3-123.jpg"
+     style="height: 350px;" /></a>
+
+<blockquote>
+<div class="line-block">
+
+<div class="line"><strong>Coxeter Groups meet Convex Geometry</strong></div>
+<div class="line"><em>(Mini-courses and Workshop)</em></div>
+<div class="line"><a href="http://lacim.uqam.ca/">LaCIM</a> (Laboratoire de Combinatoire et Informatique
+Mathématique)</div>
+<div class="line"><a href="http://uqam.ca/">UQÀM</a> (Université du Québec à Montréal)</div>
+<div class="line">Montréal, Québec</div>
+<div class="line">August 13-17 and 20-22, 2012</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Contact:</th><td class="field-body"><div class="first last line-block">
+<div class="line"><a class="reference external" href="mailto://coxeter-conv&#64;lacim.ca">coxeter-conv&#64;lacim.ca</a></div>
+</div>
+</td>
+</tr>
+<tr class="field"><th class="field-name" colspan="2">Organization:</th></tr>
+<tr><td>&nbsp;</td><td class="field-body"><div class="first last line-block">
+<div class="line"><a class="reference external"
+		     href="http://hohlweg.math.uqam.ca">Christophe
+    Hohlweg</a></div>
+<div class="line"><a class="reference external"
+		     href="http://page.mi.fu-berlin.de/labbe/">Jean-Philippe
+    Labbé</a></div>
+<div class="line"><a class="reference external"
+		     href="http://geom.mi.fu-berlin.de/lange/">Carsten
+    Lange</a></div>
+<div class="line"><a class="reference external"
+		     href="http://www.math.ens.fr/~vripoll/">Vivien
+		     Ripoll</a></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+<p>There are numerous examples of relations between convex geometry
+and Coxeter groups, the most known probably being the construction of
+the Tits cone. During these last years, many interesting other
+examples have been thoroughly studied, among them:</p>
+<ul>
+<li> generalized
+associahedra and permutahedra of finite reflection groups; </li>
+<li> Cambrian fans; </li>
+<li> brick polytopes and multi-associahedra; </li>
+<li> imaginary cones and infinite root systems.</li>
+</ul>
+
+<img alt="Picture: Accumulation of roots in an infinite Coxeter
+     group" title="Accumulation of roots in an infinite Coxeter group"
+     class="align-right" src="AccuRoots1.png" style="height: 250px;"
+     />
+
+<p>These nice encounters between Coxeter groups and convex geometry
+  have two main consequences:</p>
+<ul>
+<li> we manage to better understand the combinatorics and geometry of
+Coxeter groups by encoding some of their characteristics in
+ polytopal or more general convex
+  constructions;</li>
+<li> we also obtain new families of interesting polytopes, which is very
+useful in convex geometry since such families are fairly rare. </li>
+</ul>
+
+<p>The aim of this meeting is to bring together experts and interested people of
+both communities, in order to learn from each other and to discuss
+together new avenues that can be explored. The timeline
+  is the following:</p>
+<ul>
+<li> <strong>August 13-17</strong>: series of mini-courses (see
+  the outlines and some slides and lecture notes in the section <a href="#lectures">Lectures</a> below):<p></p>
+<ul>
+<li> <strong>Geometry of Coxeter groups and root systems</strong> [<a href="http://hohlweg.math.uqam.ca/">Christophe
+Hohlweg</a>]<p></p>
+</li>
+<li> <strong>Introduction to polytopes, Cambrian lattices and Cambrian
+fans, generalized permutahedra</strong> [<a href="http://geom.mi.fu-berlin.de/lange/">Carsten Lange</a>]<p></p>
+</li>
+
+<li> <strong>Brick polytopes and generalized associahedra</strong>
+  [<a href="http://www.lix.polytechnique.fr/~pilaud/">Vincent Pilaud</a>]
+<p></p></li>
+<li> <strong>Bruhat intervals and polyhedral cones</strong>
+[<a href="http://www.nd.edu/~dyer/">Matthew Dyer</a>]<p></p>
+
+</li>
+</ul>
+</li>
+<li> <strong>August 20-22</strong>: discussions and collaborations.</li>
+</ul>
+
+
+<p>The registration is now closed. For any information, please contact <a class="reference external" href="mailto://coxeter-conv&#64;lacim.ca">coxeter-conv&#64;lacim.ca</a>.</p>
+
+
+</blockquote>
+</div>
+
+
+<div class="section" id="program">
+<h1><a class="toc-backref" href="#id2">Program</a></h1>
+<blockquote>
+<!--<div class="line-block">
+-->
+
+
+<p><strong>Reception:</strong> Monday 13th, from 8h30 to 9h, in the LaCIM central room PK-4214 (4th floor of President-Kennedy building, see section <a href="location">Location</a>).</p>
+
+
+<p><strong>Minicourses:</strong> 
+<!--<ul>
+<li><strong>Monday:</strong> Introduction to Coxeter groups and to root systems, permutahedra [C. Hohlweg]. Geometry of infinite root systems [C. Hohlweg].</li>
+<li><strong>Tuesday:</strong> Introduction to polytopes [C. Lange]. Cambrian lattices and Cambrian
+fans [C. Lange].</li>
+<li><strong>Wednesday:</strong> Generalized permutahedra [C. Lange]. Brick polytopes and generalized associahedra [V. Pilaud].</li>
+<li><strong>Thursday:</strong> Brick polytopes and generalized associahedra (continued). Bruhat intervals and polyhedral cones [M. Dyer].</li>
+<li><strong>Friday:</strong> Bruhat intervals and polyhedral cones (continued). Diverse discussions and organization of the following week of workshop.</li>
+</ul>-->
+The lectures will take place in room PK-5115 (5th floor).</p>
+
+<p>(*) During the second slot of the afternoon (15h30-17h... or more), the lecturers will be available to answer questions, or talk about the exercises. This is also a time devoted for blackboard discussions between the participants (we provide coffee and you'll make the theorems!).</p>
+
+<p>You can download the <a href="schedule_lectures.pdf">pdf version</a> with a more detailed schedule.</p>
+
+<table border="1">
+<tr><th></th><th>9h-10h30</th><th>11h-12h30</th><th>14h-15h30</th><th>15h30-17h</th></tr>
+<tr><th>M 13</th><td> Coxeter I [Hohlweg]</td><td>Coxeter I [Hohlweg]</td><td>Polytopes I [Lange]</td><td>Polytopes I [Lange]</td></tr>
+<tr><th>T 14</th><td>Polytopes II [Lange]</td><td>Brick I [Pilaud]</td><td>Brick I [Pilaud]</td><td>Discussions*</td></tr>
+<tr><th>W 15</th><td> Polytopes III [Lange]</td><td>Brick
+II [Pilaud]</td><td>Brick II [Pilaud]</td><td>Discussions*</td></tr>
+<tr><th>T 16</th><td>Coxeter II  [Hohlweg]</td><td>Bruhat I [Dyer]</td><td>Bruhat I [Dyer]</td><td>Discussions*</td></tr>
+<tr><th>F 17</th><td>Bruhat II [Dyer]</td><td>Bruhat II [Dyer]</td><td>Free afternoon</td><td>Free afternoon</td></tr>
+</table>
+
+
+
+
+<p>The description of the lectures can be found in the section <a href="#lectures">Lectures</a> below.</p>
+<p><strong>Workshop:</strong> The problems stated during the lectures of the first week, as well as problems that may be proposed by the participants, will be the basis for the discussions of the workshop days.</p> 
+<p>You can now consult the tentative <a href="schedule_workshop.pdf">schedule of the workshop</a>.</p>
+
+
+
+<!--<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+
+
+</tbody>
+</table>
+-->
+</blockquote>
+</div>
+
+<div class="section" id="lectures">
+<h1><a class="toc-backref" href="#id3">Lectures</a></h1>
+<blockquote>
+<div class="line-block">
+
+<p>The first week will consist in several mini-courses that build on each other:</p>
+
+<ul>
+<li> <strong>Geometry of Coxeter groups and root systems</strong> [<a href="http://hohlweg.math.uqam.ca/">Christophe
+Hohlweg</a>]<p></p>
+<p>(<strong>The <a href="CG2_Lecture_Hohlweg.pdf">slides of the lectures</a> are now available.)</strong></p>
+<ol> 
+<li><em>Finite reflection groups and permutahedra.</em>  In this first
+lecture we will put the emphasis on a presentation of finite Coxeter
+groups by the mean of a family of convex polytopes named
+permutahedra. Then we will give a construction of a second class of
+convex polytopes, generalized associahedra, that is intimately linked
+to permutahedra.</li>
+<li><em>On the geometry of infinite root systems.</em> The aim of this second lecture is to present some open
+problems that arise when trying to generalize some combinatorial and
+geometrical properties seen in the first lecture to infinite Coxeter groups.</li></ol><br/>
+<em>Selected Bibliography:</em><br/>
+[1] M. Dyer, On the Weak Order of Coxeter groups,
+<a href="http://arxiv.org/abs/1108.5557">arXiv:1108.5557</a>. <br/> [2]
+C. Hohlweg, Permutahedra and Associahedra: Generalized associahedra
+from the geometry of finite reflection groups in « Associahedra,
+Tamari Lattices and Related Structures », Tamari Memorial Festschrift,
+editors F.  Mueller-Hoissen, J. Pallo and J. Stasheff, Progress in
+Mathematics, vol.  299, (Birkhauser,
+2012), <a href="http://arxiv.org/abs/1112.3255">arXiv:1112.3255</a>.<br/>
+[3] C. Hohlweg, J. P. Labbé and V. Ripoll, Asymptotic behaviour of
+roots of infinite Coxeter groups
+I, <a href="http://arxiv.org/abs/1112.5415">arXiv:1112.5415</a>.<br/>
+[4] J. E. Humphreys, Reflection groups and Coxeter groups, Cambridge
+University Press.
+<p></p>
+</li>
+
+<li> <strong>Introduction to polytopes, Cambrian lattices and Cambrian
+fans, generalized permutahedra</strong> [<a href="http://geom.mi.fu-berlin.de/lange/">Carsten Lange</a>]<!--<p>(<strong>The <a href="CG2_Lecture_Lange.pdf">slides of the lectures</a> are now available.)</strong></p>-->
+<p></p>
+<ol>
+<li><em>Introduction to the theory of polytopes.</em>  The first lecture 
+is a basic introduction to polyhedral geometry and polytopes. Our goal is 
+to clarify different notions of equality for polytopes and explain possible 
+relations between distinct families of equal polytopes.</li>
+<li><em>Cambrian theory and associahedra.</em> We use associahedra in 
+the second lecture as a fundamental example to show how certain phenomena that 
+occur in the combinatorics of Coxeter groups can be described geometrically.</li>
+<li><em>Generalized permutahedra.</em> The third lecture puts these phenomena 
+into the unifying geometric picture of generalized permutahedra and discusses 
+some aspects of generalized permutahedra.</li></ol>
+<br/><em>Selected Bibliography:</em><br/>
+[1] C. Ceballos, F. Santos, G. M. Ziegler, Many non-equivalent realizations of the associahedron, <a href="http://arxiv.org/abs/1109.5544">arXiv:1109.5544</a>.
+<br/>[2] C. Hohlweg, C. Lange, H. Thomas, Permutahedra and generalized associahedra, Adv. Math. 226 (2011), 608-640.
+<br/>[3] J. Morton, L. Pachter, A. Shiu, B. Sturmfels, O. Wienand, Convex rank tests and semigraphoids, SIAM J. Discrete Math. 23 (2009), 1117--1134.
+<br/>[4] N. Reading, D. Speyer, Cambrian fans, J. Europ. Math. Soc. (JEMS) 11 (2009), 407-447.
+<br/>[5] A. Postnikov, Permutahedra, associahedra and beyond, Int. Math. Res. Not. (2009), 1026-1106.
+<br/>[6] A. Postnikov, V. Reiner, L. Williams, Faces of generalized permutahedra, Documenta Math. 13 (2008) 207-273.
+<p></p>
+</li>
+
+<li> <strong>Brick polytopes and generalized associahedra</strong>
+  [<a href="http://www.lix.polytechnique.fr/~pilaud/">Vincent Pilaud</a>]
+<p>(<strong>The <a href="CG2_Lecture_Pilaud.pdf">slides of the lectures</a> are now available.)</strong></p>
+<p></p>
+
+
+<p>&nbsp; &nbsp; &nbsp; We will present the construction of the brick polytope of a subword
+complex, which was developed in type A in [PS2] and in general finite types
+in [PS1]. The first lecture will be devoted to the combinatorics of subword
+complexes and to the definition of the brick polytope, while the second one
+will cover the geometric properties of the brick polytope and its
+application to generalized associahedra. We will essentially follow the
+presentation of [PS1].</p>
+<em>Selected Bibliography:</em><br/>
+        [PS1] V. Pilaud and C. Stump. Brick polytopes of spherical subword
+complexes: a new approach to generalized associahedra (<a href="http://arxiv.org/abs/1111.3349">arXiv:1111.3349</a>).
+<br/>
+        [PS2] V. Pilaud and F. Santos. The brick polytope of a sorting
+network. European J. Combin. 2012.<br/>
+        [KM] A. Knutson and E. Miller. Subword complexes in Coxeter groups.
+Adv. Math. 2004.<br/>
+        [PP] V. Pilaud and M. Pocchiola. Multitriangulations,
+pseudotriangulations and primitive sorting networks. Discrete and Comput.
+Geom. 2012.<br/>
+        [CLS] C. Ceballos, J.-P. Labbé and C. Stump. Subword complexes,
+cluster complexes, and generalized multi-associahedra (<a href="http://arxiv.org/abs/1108.1776">arXiv:1108.1776</a>).<br/>
+        [P] V. Pilaud. The greedy flip tree of a subword complex 
+(<a href="http://arxiv.org/abs/1203.2323">arXiv:1203.2323</a>).<p></p>
+</li>
+<li> <strong>Bruhat intervals and polyhedral cones</strong>
+[<a href="http://www.nd.edu/~dyer/">Matthew Dyer</a>]
+<p></p><p><strong>(The <a href="CG2_Lecture_Dyer.pdf">lecture notes</a> are now available.)</strong></p>
+<p></p>
+<ol>
+<li><em>Bruhat order and the root labelled Bruhat graph.</em> We shall
+describe Bruhat order on a Coxeter group and attach to it a directed
+graph with edges labelled by roots. We see that Bruhat intervals are
+face posets of certain regular CW complexes underlying spheres. (See [5])</li>
+<li><em>Vector labelled face lattice of a polyhedral cone.</em> Motivated by 1), we attach to a polyhedral cone in a Euclidean space the
+Hasse diagram of its face lattice
+with edges of the Hasse diagram labelled by suitable vectors ([5]). The
+face lattice is again the face poset of a regular CW complex of a sphere.</li>
+<li><em>Deodhar's conjecture and the nil Hecke ring.</em> We discuss Deodhar's conjecture, which may be viewed as the
+analogue for Bruhat order of the trivial fact that a d-dimensional convex
+polytope has at least (d+1) vertices. The proof (see [6]) involves rational
+functions from Kostant and Kumar's nil Hecke ring,
+which arises in the study of T-equivariant cohomology of flag varieties of
+Kac-Moody groups.</li>
+<li><em>Volume formula for polyhedral cones.</em> We indicate the
+analogous arguments to those in 3) in the context 2) instead of 1),
+which turn out to involve rational functions describing volume
+formulae for frustums of cones.</li>
+<li><em>Conjecture on Bruhat intervals and polyhedral cones.</em>
+Partly motivated by 3)-4) (and more fully by [7]) we present a part
+of some conjectures which suggest there is a natural common
+generalization of the structures considered in 1) and 2).</li>
+</ol>
+<br/>
+
+<em>Background knowledge:</em> The following will be discussed in lectures, but
+some prior familiarity would be helpful:
+<ul>
+<li>Coxeter groups, Bruhat order: Ch 5 of [1], Ch 2 of [2].</li>
+<li>Polyhedral cones, polytopes, homogenization: Lectures 0-2 of [3].</li>
+<li>Posets, regular CW complexes, shellability: Appendix 4.7 of [4].</li>
+</ul>
+<br/>
+<em>Selected Bibliography:</em><br/>
+
+[1] Humphreys, James E., Reflection groups and Coxeter groups, Cambridge
+Studies in Advanced Mathematics 29, Cambridge University Press, Cambridge,
+1990.<br/>
+
+[2] Björner, Anders and Brenti, Francesco, Combinatorics of Coxeter
+groups, Graduate Texts in Mathematics 231,
+ Springer, New York, 2005.<br/>
+
+[3] Ziegler, Günter M., Lectures on polytopes, Graduate Texts in
+Mathematics 152,
+Springer-Verlag, New York,1995.<br/>
+
+[4] Björner, Anders and Las Vergnas, Michel and Sturmfels, Bernd and
+White, Neil and Ziegler, Günter M., 
+Oriented matroids, Encyclopedia of Mathematics and its
+Applications 46, Cambridge University Press, Cambridge, 1999.<br/>
+
+[5] Dyer, M. J., Bruhat intervals, polyhedral cones
+and Kazhdan-Lusztig-Stanley polynomials,
+ Math. Z. 215 (1994), 223-236.<br/>
+
+[6] Dyer, M. J., The nil Hecke ring and Deodhar's conjecture on
+Bruhat intervals, Invent. Math.
+ 111, (1993), 571--574.<br/>
+
+[7] Dyer, M. J., Representation theories from Coxeter groups, in
+Representations of groups (Banff, AB, 1994),
+ CMS Conf. Proc. 16, 105--139, Amer. Math. Soc., Providence, RI, 1995.
+
+</li>
+</ul>
+
+<!--<p>We would like to gather a maximum of about 30 participants, related to
+  the topics. There is no registration fee.</p>
+
+<p> The deadline for application for financial assistance was April
+  19th.</p>
+
+
+<p> It is still possible to apply for registration, but <em>without
+financial support</em>. Please send an email to
+<a class="reference external" 
+href="mailto://coxeter-conv&#64;lacim.ca">coxeter-conv&#64;lacim.ca</a>
+with the following information:</p>
+Name:<br/>
+Status (PhD student, postdoc, professor...):<br/>
+Affiliation:<br/>
+Address:<br/>
+Email:<br/>
+I want to attend the minicourses (13th-17th August):<br/>
+I want to attend the workshop (20th-22nd August):<br/>
+-->
+
+</div>
+</blockquote>
+</div>
+
+<div class="section" id="participants">
+<h1><a class="toc-backref" href="#id4">Participants</a></h1>
+
+<blockquote>
+<!--<div class="line-block">
+-->
+
+<!--* = to be confirmed<br/>-->
+<br/>
+<table>
+<tr><td>Natalie Aisbett </td><td> University of Sydney  </td> </tr> 
+<tr> <td> François Bergeron </td><td> UQÀM </td> </tr> 
+<tr> <td> Maxime Bergeron </td><td> McGill University </td> </tr> 
+<tr> <td> Pierre Cagne</td><td> ENS Paris</td> </tr>
+<tr> <td> Michael Carr </td><td> Brandeis University </td> </tr> 
+<tr> <td> Alex Csar </td><td> University of Minnesota </td> </tr>
+<tr> <td> Kevin Dilks </td><td> University of Minnesota </td> </tr> 
+<tr> <td> Jonathan
+Durand Burcombe &nbsp;</td><td> UQÀM </td> </tr> 
+<tr> <td> Matthew
+Dyer </td><td> University of Notre Dame </td> </tr> 
+<tr> <td> Timothy
+Ferdinands </td><td> University of Notre Dame </td> </tr> 
+<tr> <td>
+Stefan Forcey </td><td> University of Akron </td> </tr> 
+<tr> <td>
+Xiang Fu </td><td> University of Sydney </td> </tr> 
+<tr> <td>
+John Harnad </td><td> Concordia University </td></tr>
+<tr> <td>
+Christophe Hohlweg </td><td> UQÀM </td> </tr> 
+<tr> <td> Jean-Philippe
+Labbé </td><td> Freie Universität Berlin </td> </tr> 
+<tr> <td> Sébastien
+Labbé </td><td>  UQÀM </td> </tr>
+<tr> <td> Nadia
+Lafrenière </td><td> UQÀM </td> </tr> 
+<tr> <td> Carsten
+Lange </td><td> Freie Universität Berlin </td> </tr> 
+<tr> <td> Thomas
+McConville </td><td> University of Minnesota </td> </tr> 
+<tr> <td> John
+McKay </td><td> Concordia University </td> </tr> 
+<tr> <td> Alexander
+Miller </td><td> University of Minnesota </td> </tr> 
+<tr> <td>
+Alejandro Morales </td><td> UQÀM </td> </tr> 
+<tr> <td> Vincent
+Pilaud </td><td> École Polytechnique </td> </tr> 
+<tr> <td> Alex
+Postnikov </td><td> MIT </td> </tr> 
+<tr> <td> Jean-Philippe Préaux</td><td> Université d'Aix-Marseille </td> </tr> 
+<tr> <td> Vic
+Reiner </td><td> University of Minnesota </td> </tr> 
+<tr> <td> Vivien
+Ripoll </td><td> UQÀM </td> </tr> 
+<tr> <td> Franco Saliola </td> <td> UQÀM </td> </tr>
+<tr> <td> Jihye Seo </td><td> McGill
+University </td> </tr> 
+<tr> <td> Alina Stancu </td><td> Concordia University</td> </tr>
+<tr> <td> Salvatore Stella </td><td> Northeasten
+University </td> </tr> 
+<tr> <td>Yannic Vargas</td><td>UQÀM</td> </tr> 
+</table>
+
+
+
+
+<!--</div>
+-->
+</blockquote>
+</div>
+
+<!--<div class="section" id="program">
+<h1><a class="toc-backref" href="#id4">Program</a></h1>
+<blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+
+
+</tbody>
+</table>
+</blockquote>
+</div>
+-->
+
+<div class="section" id="location">
+<h1><a class="toc-backref" href="#id5">Location</a></h1>
+<blockquote>
+The minicourses and the workshop will take place in the President-Kennedy
+building on the UQÀM campus. The entrance is located at 201, President-Kennedy Street (it is also one of the entrances of the metro station Place des Arts).
+<ul>
+<li>Reception (8h30-9h on Monday 13th): central room of LaCIM PK-4214 (4th floor)</li>
+<li>Minicourses: room PK-5115 (5th floor)</li>
+<li>Workshop: rooms PK-5115 and PK-4323</li>
+</ul>
+
+</blockquote>
+<center>
+<iframe width="425" height="420" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ca/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=201+pr%C3%A9sident-kennedy,+montr%C3%A9al&amp;sll=49.891235,-97.15369&amp;sspn=42.435514,78.046875&amp;ie=UTF8&amp;hq=&amp;hnear=201+Avenue+Du+President-Kennedy,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&amp;view=map&amp;ll=45.50946,-73.568101&amp;spn=0.010526,0.018239&amp;z=16&amp;output=embed"></iframe>
+<br /><small><a href="http://maps.google.ca/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=201+pr%C3%A9sident-kennedy,+montr%C3%A9al&amp;sll=49.891235,-97.15369&amp;sspn=42.435514,78.046875&amp;ie=UTF8&amp;hq=&amp;hnear=201+Avenue+Du+President-Kennedy,+Montr%C3%A9al,+Communaut%C3%A9-Urbaine-de-Montr%C3%A9al,+Qu%C3%A9bec&amp;view=map&amp;ll=45.50946,-73.568101&amp;spn=0.010526,0.018239&amp;z=15" style="color:#0000FF;text-align:left">Click to view larger map</a></small>
+</center></div>
+
+<div class="section" id="hotels">
+
+<h1><a class="toc-backref" href="#id6">Hotels</a></h1>
+<blockquote>
+
+<p>The following hotels are within walking distance to the conference
+venue, and have an agreement with UQÀM to offer special rates. <strong> When you make your booking, ask for the corporate rate for UQÀM.</strong></p>
+<p>N.B.: prices are indicated per night, in Canadian dollars, without taxes.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.armormanoir.com/">Armor Manoir Sherbrooke</a>: 99$ for a superior room: queen size bed or two single beds (twin), private bathroom, includes breakfast.</li>
+<li><a class="reference external"
+href="http://www.appartementhotel.com/">L'Appartement Hôtel</a>:
+Single occupancy: studio apartment (queen size bed + kitchenette):
+127$ (115$ if you stay 7 nights or more). Double occupancy: suite (one
+bedroom with queen size bed + living-room with sofa bed +
+kitchenette): $133 (150$ if you stay 7 nights or more).  Includes
+breakfast.</li>
+<li><a class="reference external" href="http://www.trylon.ca/">Trylon Apartments Hotel</a>:
+studio : 62$, junior suite :
+67$, 2 bedrooms apartment : 78$. (<em>mention the name of the conference and of the organizers in your booking</em>)
+</li>
+<li><a class="reference external" href="http://www.deltahotels.com/en/hotels/quebec/delta-montreal">Delta Montréal</a>:
+$138 for single occupancy.</li>
+<!--<li><a class="reference external" href="http://www.hotel-st-denis.com/">Hôtel St-Denis</a>:
+$79 for 1 bed; $95 for 2 beds; plus $9 for each additional occupant.
+Includes breakfast.</li>
+-->
+</ul>
+
+<p> <strong> Important:</strong> for the participants who have
+financial support from the LaCIM, we remind you to <em>keep all your
+receipts</em> (invoice of plane tickets, boarding passes, hotel bill,
+gas bill, restaurant receipts); this will make much easier the process
+of reimbursement.</p>
+
+
+</blockquote>
+</div>
+
+
+<div class="section" id="travel">
+<h1><a class="toc-backref" href="#id7">Travel</a></h1>
+<blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Plane:</th><td class="field-body">Montreal is served by the <a class="reference external" href="http://www.admtl.com">Pierre Elliott Trudeau Airport (YUL)</a>.
+From the airport, a taxi to the downtown core costs about $35-$45.
+More economically, you can take the <a class="reference external" href="http://www.stm.info/english/bus/geomet/a-geo747.htm">Airport Express bus #747</a>, which
+operates 24 hours per day and costs $8 (exact fare
+    necessary <strong>coins only!</strong>). The ticket provides also
+    with a transit pass valid during 24h for all the STM network.<br/>
+The closest stop to UQAM is stop number 8 (René Lévesque and Jeanne-Mance).</td>
+</tr>
+<tr class="field"><th class="field-name">Bus:</th><td class="field-body">Buses arrive and depart from the
+<a class="reference external" href="http://maps.google.com/maps?q=Station+Centrale+d'Autobus+Montr%C3%A9al+Inc.,+505+Boulevard+de+Maisonneuve+Est,+Montreal,+QC+H2L+4R6,+Canada&amp;hl=en&amp;ie=UTF8&amp;ll=45.515685,-73.560998&amp;spn=0.018734,0.02811&amp;hq=Station+Centrale+d'Autobus+Montr%C3%A9al+Inc.,+505+Boulevard+de+Maisonneuve+Est,+Montreal,+QC+H2L+4R6,+Canada&amp;t=m&amp;z=16&amp;vpsrc=6">Station Centrale d'autobus</a>,
+which is a short walk to/from UQAM.
+Intercity bus service is offered by
+<a class="reference external" href="http://ca.megabus.com">Megabus</a>,
+<a class="reference external" href="http://www.coachcanada.com/coachcanada">Coach Canada</a>,
+<a class="reference external" href="http://www.trailwaysny.com/">Adirondack Trailways</a>,
+<a class="reference external" href="http://www.greyhound.ca/">Greyhound</a>.</td>
+</tr>
+<tr class="field"><th class="field-name">Train:</th><td class="field-body">Trains arrive and depart from the
+<a class="reference external" href="http://maps.google.com/maps?q=Montreal+Central+Station,+Montreal,+QC,+Canada&amp;hl=en&amp;ll=45.500166,-73.565762&amp;spn=0.00937,0.014055&amp;sll=45.499993,-73.566663&amp;sspn=0.00937,0.014055&amp;vpsrc=0&amp;hnear=Montreal+Central+Station&amp;t=m&amp;z=17">Gare Centrale</a>,
+which is a short walk to/from UQAM.
+Train service is provided by
+<a class="reference external" href="http://www.viarail.ca">Via Rail Canada</a>
+and
+<a class="reference external" href="http://www.amtrak.com">Amtrak</a>.</td>
+</tr>
+<tr class="field"><th class="field-name">Other:</th><td class="field-body">More information can be found on the <a class="reference external" href="http://wikitravel.org/en/Montreal#Get_in">WikiTravel website for Montreal</a>.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+<!-- Restaurants -->
+<!-- - - - - - - - - - - - -->
+<!--  -->
+
+
+
+<div class="section" id="other-information">
+<h1><a class="toc-backref" href="#id8">Other information</a></h1>
+<blockquote>
+
+
+
+
+<p><strong>Thursday dinner:</strong> We reserved in the restaurant <a href="http://www.nilbleu.ca/?lang=en">Le Nil Bleu</a> (ethiopian food) on Thursday 16th at 6:30pm (3706 rue St-Denis, corner Avenue des Pins). Please let us know by Tuesday noon about your presence and the number of accompanying people.</p>
+
+<p><strong>Information document:</strong> Here is
+a <a href="InformationCG2.pdf">pdf document</a> with general
+information on the conference and on Montreal, in particular a map of the restaurants near LaCIM (will be distributed on Monday).</p>
+
+<p><strong>Photos:</strong> the group photos can be found on <a href="photos.html">that page</a>.</p>
+
+<p><strong>Funding:</strong> We are grateful for the financial support from the <a href="http://lacim.uqam.ca">LaCIM</a>.</p>
+
+<table width="100%">
+<tr>
+<td width="100%" align="center"><a href="http://lacim.uqam.ca"><img src="lacim.jpg" width="90" alt="logo LaCIM"/></a></td>
+</tr>
+</table>
+
+<!--<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Past Meetings:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+-->
+
+</blockquote>
+</div>
+
+
+<!-- Icon for the W3C validation-->
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" /></a>
+  </p>
+
+
+</div>
+
+<!-- For statistical data -->
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7609370; 
+var sc_invisible=1; 
+var sc_security="c56d8ed7"; 
+</script>
+<script type="text/javascript"
+src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+<noscript><div class="statcounter"><a title="counter for
+vBulletin" href="http://statcounter.com/vbulletin/"
+class="statcounter"><img class="statcounter"
+src="http://c.statcounter.com/7609370/0/c56d8ed7/1/"
+alt="counter for vBulletin" /></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+</body>
+</html>
