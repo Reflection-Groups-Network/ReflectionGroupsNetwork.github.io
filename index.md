@@ -8,8 +8,10 @@ title: The Reflection Groups Network
 
 ## Upcoming events
 - **Online Seminar** — Next talk: *DATE*, Speaker, Title ([details]({{ "/online-seminar/" | relative_url }}))
-- **Upcoming events** — *DATE*, City ([details]({{ "/events/" | relative_url }}))
-- [**Past events**]({{ "/past-events/" | relative_url }})
+- **C.I.M.E. - Algebraic and geometric combinatorics: Coxeter group theory and representation theory** — *June 29-July 3, 2026*, Cetraro, Italy ([details](https://sites.google.com/unifi.it/cime/c-i-m-e-courses/c-i-m-e-courses-2026/algebraic-and-geometric-combinatorics-coxeter-group-theory-and-representat))
+- [**More upcoming events**]({{ "/events/" | relative_url }})
+
+## [Past Events]({{ "/past-events/" | relative_url }})
 
 ## Mailing list
 To receive announcements: **subscribe here** → (put your link)
