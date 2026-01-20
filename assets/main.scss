@@ -1,4 +1,10 @@
+---
+---
+
 @import "minima";
 
-/* Keep the small title, remove the big heading */
+/* === RGN OVERRIDE TEST 12345 === */
+.site-title { font-size: 40px !important; }
+
+/* Keep the small title, remove only the big footer heading */
 .site-footer .footer-heading { display: none !important; }
