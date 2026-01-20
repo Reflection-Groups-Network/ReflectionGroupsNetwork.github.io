@@ -1,8 +1,4 @@
----
----
-
 @import "minima";
 
-/* Remove the duplicated footer title lines */
-.site-footer .footer-heading { display: none !important; } 
-/*  .site-footer .p-name { display: none !important; } */
+/* Keep the small title, remove the big heading */
+.site-footer .footer-heading { display: none !important; }
