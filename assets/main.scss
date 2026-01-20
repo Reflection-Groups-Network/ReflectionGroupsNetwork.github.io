@@ -76,3 +76,30 @@ pre, code {
   color: #e0e0e0;
   border-color: #5f5f5f;
 }
+
+/* ===== Fix: mobile dropdown menu (Minima) ===== */
+@media screen and (max-width: 600px) {
+  /* White popup container in Minima */
+  .site-nav {
+    background-color: #3f3f3f !important;
+    border-color: #5a5a5a !important;
+  }
+
+  /* Dropdown panel itself */
+  .site-nav .trigger {
+    background-color: #3f3f3f !important;
+    border-color: #5a5a5a !important;
+  }
+
+  /* Ensure links remain readable inside the dropdown */
+  .site-nav .page-link,
+  .site-nav .page-link:visited {
+    color: #e2e2e2 !important;
+  }
+
+  .site-nav .page-link:hover,
+  .site-nav .page-link:focus {
+    color: #ffffff !important;
+  }
+}
+
