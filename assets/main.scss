@@ -9,70 +9,70 @@
 /* Keep the small title, remove only the big footer heading */
 .site-footer .footer-heading { display: none !important; }
 
-/* ===== Dark grey theme (soft, academic) ===== */
+/* ===== RGN Calm Dark Theme ===== */
 
-body {
-  background-color: #2b2b2b;   /* soft dark grey */
-  color: #e0e0e0;              /* light grey text */
-}
-
-/* Links */
-a {
-  color: #8ab4f8;
-}
-a:visited {
-  color: #8ab4f8;
-}
-a:hover {
-  color: #ffffff;
+/* Background + base text */
+html, body {
+  background-color: #3f3f3f;   /* soft charcoal */
+  color: #dddddd;              /* calm light grey */
 }
 
-/* Header */
-.site-header {
-  background-color: #2b2b2b;
-  border-bottom: 1px solid #444;
-}
-
-/* Footer */
+/* Main layout blocks */
+.site-header,
+.page-content,
 .site-footer {
-  background-color: #2b2b2b;
-  border-top: 1px solid #444;
+  background-color: #3f3f3f;
+}
+
+/* Subtle separators */
+.site-header {
+  border-bottom: 1px solid #5a5a5a;
+}
+.site-footer {
+  border-top: 1px solid #5a5a5a;
   color: #cfcfcf;
 }
 
-/* Page content */
-.page-content {
-  background-color: #2b2b2b;
+/* Body links (soft blue, not flashy) */
+a, a:visited {
+  color: #9bb7e0;
+}
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-/* Code blocks */
-pre, code {
-  background-color: #1e1e1e;
-  color: #dcdcdc;
-  border-color: #444;
+/* Headings: slightly brighter than body text */
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0;
 }
 
-
-/* ===== Header text contrast fix ===== */
-
-/* Site title */
+/* Header title */
 .site-title,
 .site-title:visited {
-  color: #f0f0f0;   /* near white */
+  color: #f0f0f0;
 }
 
-/* Navigation links */
-.site-nav .page-link {
-  color: #e0e0e0;
+/* Navigation menu (calm, readable) */
+.site-nav .page-link,
+.site-nav .page-link:visited {
+  color: #e2e2e2;
 }
 
-/* Hover effect (important for usability) */
-.site-nav .page-link:hover {
+.site-nav .page-link:hover,
+.site-nav .page-link:focus {
   color: #ffffff;
   text-decoration: underline;
 }
 
 /* Mobile menu icon */
 .site-nav .menu-icon svg {
-  fill: #e0e0e0;
+  fill: #e2e2e2;
+}
+
+/* Code blocks (slightly inset panel) */
+pre, code {
+  background-color: #2f2f2f;
+  color: #e0e0e0;
+  border-color: #5f5f5f;
 }
