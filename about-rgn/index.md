@@ -1,3 +1,9 @@
+---
+layout: page
+title: About RGN
+permalink: /about-rgn/
+---
+
 # About the Reflection Groups Network
 
 ## Steering committee
