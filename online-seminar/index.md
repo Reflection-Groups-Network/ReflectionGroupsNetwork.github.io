@@ -3,7 +3,6 @@ layout: page
 title: The RGN Online seminar
 ---
 
-## Reflection Groups Network Online Seminar
 ### Next talk
 - Date/time (with timezone)
 - Speaker (Affiliation)
