@@ -2,7 +2,7 @@ title: Reflection Groups Network
 theme: minima
 
 header_pages:
-  - online-seminar.md
-  - events.md
-  - past-events.md
-  - about-RGN.md
+  - online-seminar/index.md
+  - events/index.md
+  - past-events/index.md
+  - about-rgn/index.md
